@@ -17,7 +17,12 @@ class PilotoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nombre'           =>  $this->faker->firstname(),
+            'apellidos'        =>  $this->faker->lastname(),
+            'f_nacimiento'     =>  $this->faker->date('Y-m-d'),
+            'email'            =>  $this->faker->email(),
+            'dni'              =>  $this->faker->dni(),
+            'telefono'         =>  $this->faker->mobileNumber(),
         ];
     }
 }

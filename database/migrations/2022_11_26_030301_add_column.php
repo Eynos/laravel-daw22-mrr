@@ -33,18 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('pilotos', function (Blueprint $table) {
-            $table->dropColumn('deleted_at');
-        });
-
-        Schema::table('vuelos', function (Blueprint $table) {
-            $table->dropColumn('created_at');
-            $table->dropColumn('updated_at');
-            $table->dropColumn('deleted_at');
-        });
-
-        Schema::table('pasajes', function (Blueprint $table) {
-            $table->dropColumn('deleted_at');
-        });
+        //
     }
 };

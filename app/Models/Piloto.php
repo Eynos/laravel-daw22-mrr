@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Piloto extends Model
 {
     use HasFactory;
+
+    protected $table = 'pilotos';
+    public $timestamps = false;
 }

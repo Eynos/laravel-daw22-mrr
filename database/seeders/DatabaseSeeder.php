@@ -1,6 +1,9 @@
 <?php
 
 namespace Database\Seeders;
+use App\Models\Pasaje;
+use App\Models\Piloto;
+use App\Models\Vuelo;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -14,11 +17,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        Piloto::factory()->count(25)->create();
+        Vuelo::factory()->count(100)->create();
+        Pasaje::factory()->count(1000)->create();
     }
 }
