@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePilotoRequest;
 use App\Http\Requests\UpdatePilotoRequest;
+use Illuminate\Http\Request;
 use App\Models\Piloto;
 
 class PilotoController extends Controller
@@ -15,7 +16,14 @@ class PilotoController extends Controller
      */
     public function index()
     {
-        //
+        $pilotos = Piloto::all();
+        return view('piloto.index',compact('pilotos'));
+    }
+
+    public function eliminar($id)
+    {
+        $pilotos = Piloto::find($id);
+        $pilotos->delete();
     }
 
     /**
