@@ -33,7 +33,7 @@ class PilotoController extends Controller
      */
     public function create()
     {
-        //
+        return view('piloto.create');
     }
 
     /**

@@ -18,4 +18,6 @@ use App\Http\Controllers\PilotoController;
 //     return view('welcome');
 // });
 Route::get('/', [PilotoController::class, 'index'])->name('piloto.index');
-Route::delete('/pilotos/{id}', [PilotoController::class, 'eliminar'])->name('piloto.eliminar');
+Route::delete('/eliminar/{id}', [PilotoController::class, 'eliminar'])->name('piloto.eliminar');
+Route::get('/create', [PilotoController::class, 'create'])->name('piloto.crear');
+Route::post('/store', [PilotoController::class, 'store'])->name("piloto.store");
